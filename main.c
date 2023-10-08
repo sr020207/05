@@ -1,21 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
 int main(int argc, char *argv[]) {
 	
-	 int num;
+	 int x;
 
     printf("정수를 입력하세요: ");
-    scanf("%d", &num);
+    scanf("%d", &x);
 
-    if (num > 0) {
-        printf("입력한 숫자는 양수입니다.\n");
-    } else if (num < 0) {
-        printf("입력한 숫자는 음수입니다.\n");
-    } else {
-        printf("입력한 숫자는 0입니다.\n");
+    if (x > 0) {
+        printf("절대값은 %d 입니다.\n", x);
+    }
+	else if (x < 0) {
+        printf("절대값은 %d 입니다.\n", -1*x);
+    }
+	else {
+        printf("절대값은 0입니다.");
     }
 
 	return 0;
