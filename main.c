@@ -3,31 +3,26 @@
 
 int main(int argc, char *argv[]) {
 	
- int num1, num2;
-    char operator;
-    
-    scanf("%d %c %d", &num1, &operator, &num2);
+ char string[100]; 
+    int digit = 0;
+    char c;
 
-    switch (operator) {
-        case '+':
-            printf("= %d\n", num1 + num2);
-            break;
-        case '-':
-            printf("= %d\n", num1 - num2);
-            break;
-        case '*':
-            printf("= %d\n", num1 * num2);
-            break;
-        case '/':
-            if (num2 != 0) {
-                printf("%.2f\n", (float)num1 / num2);
-            } else {
-                printf("0으로 나눌 수 없습니다.\n");
-            }
-            break;
-        default:
-            printf("올바른 연산자를 입력하세요.\n");
+    printf("Input a string : ");
+
+    int i = 0;
+    while ((c = getchar()) != '\n') {
+        string[i++] = c;
+    }
+    string[i] = '\0'; 
+    
+    
+    for (i = 0; string[i] != '\0'; i++) {
+        if (string[i] >= '0' && string[i] <= '9') {
+            digit++;
+        }
     }
 
-	return 0;
+    printf("The number of digits is %d\n", digit);
+
+    return 0;
 }
