@@ -3,20 +3,15 @@
 
 int main(int argc, char *argv[]) {
 	
-	 int x;
+	 float x;
+	 float sum;
+	 
+	 printf("Input a number : ");
+	 scanf("%f", &x);
 
-    printf("정수를 입력하세요: ");
-    scanf("%d", &x);
-
-    if (x > 0) {
-        printf("절대값은 %d 입니다.\n", x);
-    }
-	else if (x < 0) {
-        printf("절대값은 %d 입니다.\n", -1*x);
-    }
-	else {
-        printf("절대값은 0입니다.");
-    }
+    sum = (1 + x) * (x/2);
+    
+    printf("The result is %.0f", sum);
 
 	return 0;
 }
