@@ -3,26 +3,24 @@
 
 int main(int argc, char *argv[]) {
 	
- char string[100]; 
-    int digit = 0;
-    char c;
+ int answer = 59;
+    int guess;
+    int trials = 0;
 
-    printf("Input a string : ");
+    do {
+        printf("Guess a number : ");
+        scanf("%d", &guess);
+        trials++;
 
-    int i = 0;
-    while ((c = getchar()) != '\n') {
-        string[i++] = c;
-    }
-    string[i] = '\0'; 
-    
-    
-    for (i = 0; string[i] != '\0'; i++) {
-        if (string[i] >= '0' && string[i] <= '9') {
-            digit++;
+        if (guess > answer) {
+            printf("high!\n");
+        } else if (guess < answer) {
+            printf("low!\n");
+        } else {
+            printf("Congratulation! \n");
+            printf("trials:%d\n", trials);
         }
-    }
-
-    printf("The number of digits is %d\n", digit);
+    } while (guess != answer);
 
     return 0;
 }
